@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+<html>
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link
+      href="https://www.dropbox.com/home/Agrandir?preview=Agrandir-NarrowBlack.otf"
+      rel="stylesheet"
+    />
+    <link
+      href="https://www.dropbox.com/home/Agrandir?preview=Agrandir-Narrow.otf"
+      rel="stylesheet"
+    />
+        
+         <meta name="viewport" content="initial-scale=1,maximum-scale=1,user-scalable=no" />
+         <title>Homepage</title>
+       
+ <script src='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.js'></script>
+      <link href='https://api.mapbox.com/mapbox-gl-js/v1.12.0/mapbox-gl.css' rel='stylesheet' />
+
+
+</head>
+<body>
+<style>
+
+
+
+.infotext{
+font-family:'agrandir';
+font-size:16pt;
+font-weight:lighter;
+opacity:80%;
+width:500px;
+text-align:center;
+margin-top:-230px;
+margin-bottom:130px;
+ animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+
+
+}
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 15px); }
+    to   { transform: translate(0, -0px); }    
+}
+
+.overlay-content{
+
+
+  display:grid;
+  grid-template-columns: repeat(2, 50%);
+  grid-template-rows:repeat(3, 50%);
+  height:100vh;
+  width:100vw;
+}
+
+
+
+
+.text2 h1{
+  border-bottom:3px dashed black;
+  width:40vw;
+
+  position:relative;
+  padding-bottom:18px;
+  margin-bottom:50px;
+  font-size:50px;
+  font-weight:bolder;
+    font-family:'agrandir', serif;
+}
+
+/* Hide the images by default */
+
+
+/* Caption text */
+.text2 {
+  color: black;
+  font-family:'agrandir', serif;
+  font-weight:lighter;
+  font-size: 25px;
+padding-left:50px;
+grid-column-start:1;
+grid-column-end:1;
+grid-row-start:1;
+grid-row-end:3;
+  font-weight:lighter;
+  position: absolute;
+top:0;
+  width: 85%;
+  padding-right:50px;
+margin-top:-250px;
+
+  text-align: left;
+}
+
+.text2 i{
+
+}
+
+
+
+
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */    
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 3; /* Sit on top */
+  left: 0;
+  top: 0;
+   /* Black fallback color */
+
+background-image: url('images/background2.png');
+background-size: cover;
+background-repeat:no-repeat;
+
+
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+
+
+/* Position the content inside the overlay */
+.overlay-content {
+  position: relative;
+  top: 25%; /* 25% from the top */
+  width: 100%; /* 100% width */
+  text-align: center; /* Centered text/links */
+  margin-top: 30px; /* 30px top margin to avoid conflict with the close button on smaller screens */
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-family:'agrandir',serif;
+  font-size: 36px;
+  color: #818181;
+  padding-right:20px;
+  top:0;
+    text-align:right;
+ 
+position:sticky;
+  z-index:3;
+display:block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: #ff1aff;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+position:sticky;
+  top:0;
+  padding-right:20px;
+  text-align:right;
+  align-content:right;
+color:black;
+
+
+
+  font-size: 50px;
+}
+
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap */
+@media screen and (max-height: 500px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 20px;
+
+    right: 35px;
+  }
+}
+
+
+
+
+@media screen and (max-width: 1085px) {
+  .text2{
+    font-weight:lighter;
+    grid-row-start:1;
+    grid-row-end:2;
+    grid-column-start:1;
+    grid-column-end:3;
+  }
+  .text2 h1{
+width:100%;
+margin-top:-20px;
+  }
+ 
+}
+
+
+
+
+
+ 
+   @media screen and (max-width: 537px) {
+
+.text2{
+  width:80%;
+font-size:20px;
+      margin-left:-25px;
+  margin-top:-150px;
+
+}
+    .text2 h1{
+width:100%;
+
+    }
+  .overlay a {font-size: 30px}
+  .overlay .closebtn {
+    font-size: 30px;
+
+    right: 10px;
+  }
+   }
+
+
+@media screen and (max-width:414px) {
+  .infotext{
+font-family:'agrandir';
+font-size:13pt;
+text-align:center;
+width:400px;
+margin-left:-40px;
+margin-top:-190px;
+margin-bottom:40px;
+ animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+
+
+}
+.text2 h1{
+  font-size:17pt;
+}
+.text2 {
+  font-size:13pt;
+}
+.gif img{
+  height:175px;
+  width:168px;
+}
+.img1 img{
+  height:89px;
+  margin-left:-125px;
+  margin-top:15px;
+
+}
+.earth{
+margin-top:195px;
+
+}
+
+}
+
+@media screen and (max-width:375px){
+    .infotext{
+font-family:'agrandir';
+font-size:13pt;
+text-align:center;
+width:270px;
+margin-left:-40px;
+margin-top:-100px;
+margin-bottom:0px;
+
+ animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+
+
+}
+}
+
+@media screen and (max-width:320px){
+  .infotext{
+    display:none;
+  }
+}
+
+
+ @media screen and (max-height: 375px) {
+  .text2{
+    margin-top:-50px;
+
+    font-size:20px;
+
+  }
+
+ }
+
+  
+</style>
+<div id="myNav" class="overlay">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+  <div class="overlay-content">
+    <div class="text2">
+      <h1>ABOUT</h1>
+      <p>
+       <b><i>This Black Womxn Businesses Map is an interactive map that highlights Black womxn-owned businesses.</i></b> 
+       <br>
+       <br>
+According to a 2019 study by American Express, Black Womxn-owned businesses are the second largest segment of all womxn-owned businesses, yet they earn the least of any minority. It's our mission as a group of caring humans, to impact that revenue gap by providing and maintaining this map so that we can continue to support our favorite restaurants, bars, retail shops, cafes, and much more. We hope you'll utilize this map and share it widely! <br>
+<br>
+Our work doesn’t end here. We understand that this list is by no means exhaustive,  we’d like to continue this effort and even expand outside of home in NYC with your help. Please join us in this endeavor and share any and all Black womxn-owned businesses in NYC and beyond, because where we spend our money matters. 
+
+
+
+    </div>
+</div>
+  </div>
+<div class="logo">
+
+  <div class="img1">
+<img src="images/logo2.svg">
+</div>
+<div class="gif">
+<img src="images/BWBLOGO.gif">
+</div>
+</div>
+<div class="mail">
+  <a href = "mailto: Blackwomxnbusinesses@gmail.com
+">  <img src="images/mail.svg"></a>
+
+  </div>
+
+<div class="earth">
+
+  <div class="about">
+  <span style="cursor:pointer" onclick="openNav()">
+          <img src="images/aboutmarker.svg">
+
+  <p> ABOUT THE PROJECT</p>
+</span>
+</div>
+<div class="nominate">
+ <a href="https://docs.google.com/forms/d/e/1FAIpQLScOSSkJNUtxC1YrvxH4pGJ6zMS93fhmb1SbSn6MqELTSJWZqA/viewform">
+    <img src="images/nominatemarker.svg">
+     
+  <p>SUBMIT A BUSINESS</p>
+</a>
+</div>
+
+  </div>
+
+
+    <div class="enter">
+
+      <div class="spaceleft">
+
+
+      </div>
+      <div style="display:flex;flex-direction:column;align-content:center;align-items:center"class="position">
+<div class="infotext">
+  <p><i>☻ This Map is an interactive map that highlights Black womxn-owned businesses ☻</i></p>
+</div>
+      <a href="nycmap.html">
+<button>START SEARCH!</button>
+</a>
+</div>
+
+<div class="spaceright">
+
+  </div>
+
+</div>
+
+  </div>
+<!--     <div id="map">
+ 
+
+  </div> -->
+  <script>
+    function openNav() {
+      document.getElementById("myNav").style.width= "100%";
+    }
+    function closeNav() {
+      document.getElementById("myNav").style.width = "0%";
+    }
+  </script>
+<!-- <script>
+  mapboxgl.accessToken = "pk.eyJ1IjoibmljaG9mZXJleiIsImEiOiJja2R6MGozYjkyZmpoMzBscTBweHg1dWRjIn0.0hLtqRVLovWKojOT_EWixQ";
+
+  
+  var map = new mapboxgl.Map({
+    container: "map",
+    style: "mapbox://styles/nichoferez/ckdz0rnb4001a19ogq8bdc0a4",
+center:[2.774986, 43.464389],
+    zoom: 1.8,
+    interactive:false
+  });
+
+
+
+</script> -->
+</body>
+</html>

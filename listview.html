@@ -1,0 +1,216 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>List View</title>
+    <link
+      href="https://www.dropbox.com/home/Agrandir?preview=Agrandir-NarrowBlack.otf"
+      rel="stylesheet"
+    />
+    <link
+      href="https://www.dropbox.com/home/Agrandir?preview=Agrandir-Narrow.otf"
+      rel="stylesheet"
+    />
+           
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="browse.css" />
+  </head>
+  <body>
+<!-- <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button> -->
+<style>
+  .row{
+    margin-right:0px;
+    justify-content:flex-end;
+    margin-left:0px;
+  }
+
+.wrapper{
+    overflow:hidden;
+}
+section{
+    padding:30px 30px 30px 80px;
+    -moz-transition:all 200ms ease-in;
+    -webkit-transition:all 200ms ease-in;
+    -o-transition:all 200ms ease-in;
+    transition:all 200ms ease-in;
+
+}
+nav{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:250px;
+    height:100%;
+    margin:0 0 0 -350px;
+    -moz-transition:all 200ms ease-in;
+    -webkit-transition:all 200ms ease-in;
+    -o-transition:all 200ms ease-in;
+    transition:all 200ms ease-in;
+}
+
+
+label p{
+  line-height:30px;
+  padding-top:20px;
+  padding-right:10px;
+  font-family:'agrandir';
+}
+label:hover > p{
+  color:white;
+
+}
+label:hover{
+  cursor:pointer;
+}
+label{
+    display:block;
+
+height:75px;
+border-radius:5px;
+    background:#ff9549;
+padding:10px;
+display:flex;
+border:2px dashed #8c542c;
+flex-direction:row-reverse;
+    align-items:center;
+
+    font-size:16pt;
+
+    position:fixed;
+    top:192px;
+    left:0px;
+    -moz-transition:all 200ms ease-in;
+    -webkit-transition:all 200ms ease-in;
+    -o-transition:all 200ms ease-in;
+    transition:all 200ms ease-in;
+    z-index:500;
+}
+
+label img{
+  height:35px;
+
+ padding-right:15px;
+}
+
+
+input[type="checkbox"]{
+    display:none;
+}
+input[type="checkbox"]:checked ~ nav{
+    margin:0;
+}
+input[type="checkbox"]:checked ~ label{
+    left:335px;
+}
+input[type="checkbox"]:checked ~ section{
+    -webkit-transform:translate3d(260px, 0, 0);
+    -moz-transform:translate3d(260px, 0, 0);
+    -o-transform:translate3d(260px, 0, 0);
+    transform:translate3d(260px, 0, 0);
+}
+
+
+
+
+
+
+
+
+body{background-image: url(images/background.gif);
+  background-color:#69c9ca;
+background-size:10%;}
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+
+  <a href="index.html">
+<div class="logo">
+	<img src="images/logo.gif">
+</a>
+
+</div>
+<div class="backhome">
+          <a href="nycmap.html">
+            <div class="text">
+              <p>MAP<br>VIEW</p>
+            </div><img src="images/earth.svg"></a>
+        </div>
+
+    <div class="main_containercontainer">
+      <div class="row">
+        <div class="col-md-8">
+  <!--         <div class="search_btn flex-container">
+
+            <div>
+              <p>Search</p>
+            </div>
+
+            <div class="input">
+              <input type="text" class="search_btn_input form-control" />
+            </div>
+          </div> -->
+          <div class="list_items">
+            
+          </div>
+        </div>
+
+
+<div class="wrapper">
+
+    <input type="checkbox" id="navigation" />
+
+    <label for="navigation">
+      <p> QUICK<br>FIND </p><img style="opacity:90%;"src="images/key.svg">
+    </label>
+
+    <nav>
+<p style="position:absolute;right:-70px;top:200px;font-family:'agrandir';font-size:12pt"class="closing">x</p>
+            <div  onclick="topFunction()" class="key_section">
+
+            </div>
+    </nav>
+
+      
+
+</div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+    <script src="MainJS.js"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+<script>
+
+
+
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+  </body>
+</html>
