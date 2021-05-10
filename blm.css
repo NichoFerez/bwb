@@ -164,17 +164,15 @@ padding-bottom:20px;
 .slideshow-container {
   width: 370px;
 
-  border-radius:5px 5px 0px 0px;
+  border-radius:4px;
 background-color:#ffbfff;
 padding-top:20px;
-border-top:2px solid #8e5189;
-border-left:2px solid #8e5189;
-border-right:2px solid #8e5189;
-border-bottom:2px dashed #8e5189;
-height:350px;
+border:2px solid #8e5189;
+
+height:275px;
 overflow:scroll;
 position:relative;
-margin-top:-20px;
+margin-top:30px;
 padding-right:30px;
 padding-left:10px;
 z-index:1;
@@ -559,15 +557,14 @@ width:60px;
 
 padding-right:30px;
 padding-left:10px;
-margin-top:0px;
+margin-top:-20px;
 height:280px;
 width:370px;
-  border-radius:0px 0px 5px 5px;
+  border-radius:4px;
 background-color:#ffbfff;
 overflow-y:scroll;
-border-left:2px solid #8e5189;
-border-right:2px solid #8e5189;
-border-bottom:2px solid #8e5189;
+border:2px solid #8e5189;
+
 }
 #newbox h1{
   font-family:'agrandir', serif;
